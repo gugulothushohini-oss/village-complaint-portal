@@ -1,0 +1,19 @@
+# Database files
+*.sql
+
+# XAMPP files
+htdocs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PHP error logs
+error_log
+php_error.log
