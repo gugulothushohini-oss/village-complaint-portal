@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Village Complaint Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Village Complaint Portal</h1>
+    <p>Raise Your Complaints Easily</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#complaint">Complaint</a>
+    <a href="#sarpanch">Sarpanch</a>
+    <a href="clock.html" target="_blank">🕐 Digital Clock</a>
+</nav>
+
+<section class="container">
+
+<div class="box">
+    <h2>About Our Village</h2>
+    <p>
+        Welcome to the Village Grievance Portal.
+        Villagers can submit complaints related to roads,
+        water, electricity, drainage, and more.
+    </p>
+</div>
+
+<div class="box" id="sarpanch">
+    <h2>Sarpanch Details</h2>
+
+    <img src="https://via.placeholder.com/150" alt="Sarpanch">
+
+    <p><strong>Name:</strong> Ramesh Kumar</p>
+    <p><strong>Phone:</strong> 9876543210</p>
+    <p><strong>Email:</strong> sarpanch@gmail.com</p>
+</div>
+
+<div class="box" id="complaint">
+    <h2>Raise Complaint</h2>
+
+    <form action="submit_complaint.php" method="POST">
+
+        <input type="text" name="name" placeholder="Enter Your Name" required>
+
+        <input type="text" name="phone" placeholder="Enter Phone Number" required>
+
+        <select name="problem_type" required>
+            <option value="">Select Problem Type</option>
+            <option>Water Problem</option>
+            <option>Road Damage</option>
+            <option>Electricity</option>
+            <option>Drainage</option>
+            <option>Street Lights</option>
+        </select>
+
+        <textarea name="description" placeholder="Describe the Problem" required></textarea>
+
+        <button type="submit">Submit Complaint</button>
+
+    </form>
+</div>
+
+</section>
+
+<footer>
+    <p>Village Complaint Portal © 2026</p>
+</footer>
+
+</body>
+</html>

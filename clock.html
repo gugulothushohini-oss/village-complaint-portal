@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🕐 Digital Clock</h1>
+        <p>Current Time in Different Time Zones</p>
+    </header>
+
+    <div class="controls">
+        <button id="toggleFormat" class="btn">12-Hour Format</button>
+        <button id="addTimeZone" class="btn btn-add">+ Add Time Zone</button>
+    </div>
+
+    <div id="clocksContainer" class="clocks-container">
+        <!-- Clocks will be generated dynamically -->
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Time Zone</h2>
+            <input type="text" id="searchInput" placeholder="Search time zones..." class="search-input">
+            <div id="timeZoneList" class="timezone-list">
+                <!-- Time zones will be populated here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="clock-script.js"></script>
+
+</body>
+</html>
