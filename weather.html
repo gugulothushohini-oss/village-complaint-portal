@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather-style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🌤️ Weather Dashboard</h1>
+        <p>Real-time Weather Information</p>
+    </header>
+
+    <div class="search-section">
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search city name..." 
+                class="search-input"
+            >
+            <button id="searchBtn" class="search-btn">Search</button>
+            <button id="locationBtn" class="location-btn" title="Use current location">
+                📍 Current Location
+            </button>
+        </div>
+        <div id="suggestions" class="suggestions hidden"></div>
+    </div>
+
+    <div id="errorMessage" class="error-message hidden"></div>
+    <div id="loadingSpinner" class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p>Loading weather data...</p>
+    </div>
+
+    <div id="weatherContainer" class="weather-container hidden">
+        <!-- Current Weather -->
+        <div class="current-weather">
+            <div class="location-info">
+                <h2 id="cityName"></h2>
+                <p id="dateTime"></p>
+            </div>
+            <div class="weather-main">
+                <img id="weatherIcon" src="" alt="Weather icon" class="weather-icon">
+                <div class="temp-section">
+                    <div id="temperature" class="temperature"></div>
+                    <div id="weatherDescription" class="weather-description"></div>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feelsLike" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind Speed</span>
+                    <span id="windSpeed" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Pressure</span>
+                    <span id="pressure" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Visibility</span>
+                    <span id="visibility" class="detail-value"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">UV Index</span>
+                    <span id="uvIndex" class="detail-value"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast -->
+        <div class="forecast-section">
+            <h3>5-Day Forecast</h3>
+            <div id="forecastContainer" class="forecast-grid">
+                <!-- Forecast cards will be generated here -->
+            </div>
+        </div>
+
+        <!-- Air Quality -->
+        <div class="air-quality-section">
+            <h3>Air Quality</h3>
+            <div class="air-quality-card">
+                <div id="aqiValue" class="aqi-value"></div>
+                <div id="aqiStatus" class="aqi-status"></div>
+                <div class="pollutants">
+                    <div class="pollutant-item">
+                        <span class="pollutant-label">PM2.5</span>
+                        <span id="pm25" class="pollutant-value"></span>
+                    </div>
+                    <div class="pollutant-item">
+                        <span class="pollutant-label">PM10</span>
+                        <span id="pm10" class="pollutant-value"></span>
+                    </div>
+                    <div class="pollutant-item">
+                        <span class="pollutant-label">NO₂</span>
+                        <span id="no2" class="pollutant-value"></span>
+                    </div>
+                    <div class="pollutant-item">
+                        <span class="pollutant-label">O₃</span>
+                        <span id="o3" class="pollutant-value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sunrise & Sunset -->
+        <div class="sun-times-section">
+            <h3>Sun Information</h3>
+            <div class="sun-times-grid">
+                <div class="sun-time-card">
+                    <span class="sun-label">🌅 Sunrise</span>
+                    <span id="sunrise" class="sun-value"></span>
+                </div>
+                <div class="sun-time-card">
+                    <span class="sun-label">🌇 Sunset</span>
+                    <span id="sunset" class="sun-value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Section -->
+    <div class="favorites-section">
+        <h3>Favorite Locations</h3>
+        <div class="favorites-controls">
+            <button id="addFavoriteBtn" class="btn">⭐ Add to Favorites</button>
+            <button id="clearFavoritesBtn" class="btn btn-danger">Clear All</button>
+        </div>
+        <div id="favoritesList" class="favorites-list"></div>
+    </div>
+</div>
+
+<footer>
+    <p>Weather Dashboard | Data from OpenWeatherMap API © 2026</p>
+</footer>
+
+<script src="weather-script.js"></script>
+
+</body>
+</html>
