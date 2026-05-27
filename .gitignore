@@ -1,8 +1,16 @@
-# Database files
-*.sql
+.env
+.env.local
+.env.*.local
 
-# XAMPP files
-htdocs/
+# Logs
+logs/
+*.log
+
+# Uploads
+uploads/
+
+# Cache
+cache/
 
 # IDE
 .vscode/
@@ -10,10 +18,22 @@ htdocs/
 *.swp
 *.swo
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 
-# PHP error logs
-error_log
-php_error.log
+# Node (if using npm)
+node_modules/
+package-lock.json
+
+# Composer (if using PHP packages)
+vendor/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Database backups
+*.sql.gz
+backup.sql
